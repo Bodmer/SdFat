@@ -2,7 +2,7 @@
 A version of SdFat that works with the JPEGDecoder library.
 
 This version has one small modification to make the created SD class members 'global' so
-they can be used in this sketch and by the JPEGDecoder library.
+they can be used in a sketch and by the JPEGDecoder library.
 (The SD library makes the equivalent class global without modifications)
 There may be an easier way to do this but it works OK.
 
