@@ -6,9 +6,7 @@ they can be used in a sketch and by the JPEGDecoder library.
 (The SD library makes the equivalent class global without modifications)
 There may be an easier way to do this but it works OK.
 
-The line to add is 'extern SdFat SD;', this must be addedat around line 283
-after the SdFat class is specified.
-When the change has been made the following line sequence should appear in the
+The line added is 'extern SdFat SD;' at around line 283. Thus the following line sequence appears in the
 SdFat.h file:
 
   extern SdFat SD; //<<= Line to add, the next 2 lines are ALREADY in the file, they
@@ -19,7 +17,7 @@ SdFat.h file:
 
 The hardware SPI pins allocated on the Mega are 50, 51 and 52. On the Due these
 are not connected to the hardware SPI function, so to use the Due with TFT shields that
-use the Mega allocated pins it is necessary to bitbash the Due pins.  To do this the
+use the Mega allocated SPI pins it is necessary to bitbash the Due pins.  To do this the
 following changes have been made to the SdFatConfig.h file as indicated by =>> below:
 
 =>>    #define SD_SPI_CONFIGURATION 2  // Set to 0 for Mega, 2 for Due
