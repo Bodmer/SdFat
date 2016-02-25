@@ -7,18 +7,19 @@ There may be an easier way to do this but it works OK.
 
 The line added is 'extern SdFat SD;' at around line 283. Thus the following line sequence appears in the
 SdFat.h file:
-
+[code]
   extern SdFat SD; //<<= Line added, the next 2 lines are ALREADY in the file, they
                    //    are included here just to help locate the right place!
   //==============================================================================
   #if SD_SPI_CONFIGURATION >= 3 || defined(DOXYGEN)
-
+[/code]
 
 The hardware SPI pins allocated on the Mega are 50, 51 and 52. On the Due these
 are not connected to the hardware SPI function, so to use the Due with TFT shields that
 use the Mega allocated SPI pins it is necessary to bitbash the Due pins.  To do this the
 following changes have been made to the SdFatConfig.h file as indicated by =>> below:
 
+[code]
 =>>    #define SD_SPI_CONFIGURATION 2  // Set to 0 for Mega, 2 for Due
   //------------------------------------------------------------------------------
   /**
@@ -34,3 +35,4 @@ following changes have been made to the SdFatConfig.h file as indicated by =>> b
   /** Software SPI Clock pin */
 =>>             uint8_t const SOFT_SPI_SCK_PIN  = 52;
   //------------------------------------------------------------------------------
+[/code]
