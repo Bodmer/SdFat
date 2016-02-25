@@ -5,7 +5,12 @@ This version has one small modification to make the created SdFat class 'global'
 (The standard Arduino IDE "SD" library makes the equivalent SD class global without modifications)
 There may be an easier way to do this but it works OK.
 
-The line added is 'extern SdFat SD;' at around line 283 in the SdFat.h file.
+The line added is:
+
+```
+extern SdFat SD;
+```
+at around line 283 in the SdFat.h file.
 
 The hardware SPI pins allocated on the Mega are 50, 51 and 52. On the Due these
 are not connected to the hardware SPI function, so to use the Due with TFT shields that
