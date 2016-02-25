@@ -19,7 +19,9 @@ changes have been made to the SdFatConfig.h file.
 
 
 
-```  
+```
+#define SD_SPI_CONFIGURATION 2
+
 uint8_t const SOFT_SPI_MOSI_PIN = 51;
 
 uint8_t const SOFT_SPI_MISO_PIN = 50;
