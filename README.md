@@ -1,7 +1,7 @@
 # SdFat
 A version of SdFat that works with the JPEGDecoder library.
 
-This version has one small modification to make the created SdFAt class 'global' and allow it to be reffered to as SD. This change means member functions can be used both in a sketch and by the JPEGDecoder library.
+This version has one small modification to make the created SdFat class 'global' and allow it to be reffered to as SD. This change means member functions can be used both in a sketch and by the JPEGDecoder library.
 (The standard Arduino IDE "SD" library makes the equivalent SD class global without modifications)
 There may be an easier way to do this but it works OK.
 
