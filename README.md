@@ -15,7 +15,7 @@ at around line 283 in the SdFat.h file.
 The hardware SPI pins allocated on the Mega are 50, 51 and 52. On the Due these
 are not connected to the hardware SPI function, so to use the Due with TFT shields that
 use the Mega allocated SPI pins it is necessary to bitbash the Due pins.  To do this the
-changes have been made to the SdFatConfig.h file.
+changes have been made to the SdFatConfig.h file:
 
 
 
