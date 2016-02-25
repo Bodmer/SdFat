@@ -1,15 +1,14 @@
 # SdFat
 A version of SdFat that works with the JPEGDecoder library.
 
-This version has one small modification to make the created SD class members 'global' so
-they can be used in a sketch and by the JPEGDecoder library.
-(The SD library makes the equivalent class global without modifications)
+This version has one small modification to make the created SdFAt class 'global' and allow it to be reffered to as SD. This change means member functions can be used both in a sketch and by the JPEGDecoder library.
+(The standard Arduino IDE "SD" library makes the equivalent SD class global without modifications)
 There may be an easier way to do this but it works OK.
 
 The line added is 'extern SdFat SD;' at around line 283. Thus the following line sequence appears in the
 SdFat.h file:
 
-  extern SdFat SD; //<<= Line to add, the next 2 lines are ALREADY in the file, they
+  extern SdFat SD; //<<= Line added, the next 2 lines are ALREADY in the file, they
                    //    are included here just to help locate the right place!
   //==============================================================================
   #if SD_SPI_CONFIGURATION >= 3 || defined(DOXYGEN)
