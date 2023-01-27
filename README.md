@@ -1,3 +1,5 @@
+Deprecated, intended for Arduino Due.
+
 # SdFat
 A version of SdFat that works with the JPEGDecoder library.
 
